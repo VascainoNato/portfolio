@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Header() {
     const [lang, setLang] = useState<'pt' | 'en'>('pt');
     return (
-      <header className="flex h-20 items-center pl-8 pr-8 bg-gray-50 justify-between border-b border-gray-200 w-full shadow-sm border-opacity-90 md:pl-10 md:pr-10 lg:pl-12 lg:pr-12 xl:pl-16 xl:pr-16 xl:h-20 2xl:pl-20 2xl:pr-20 2xl:h-20 ">
+      <header className="flex h-20 items-center pl-8 pr-8 bg-gray-50 justify-between border-b border-gray-200 w-full shadow-sm border-opacity-90 md:pl-10 md:pr-10 lg:pl-12 lg:pr-12 xl:pl-16 xl:pr-16 xl:h-20 2xl:pl-20 2xl:pr-20 2xl:h-20">
         <div className="flex items-center gap-2">
           <>
           <Image 

@@ -27,11 +27,19 @@ export default function Header() {
     if (audio) {
       audio.src = tracks[currentTrack];
       audio.volume = volume;
-      if (isPlaying) {
-        audio.play().catch(() => {});
-      }
+  
+      const play = async () => {
+        try {
+          await audio.play();
+          setIsPlaying(true);
+        } catch{
+          console.warn('Autoplay bloqueado pelo navegador. Aguardando interação do usuário.');
+        }
+      };
+      play();
     }
   }, [currentTrack]);
+  
 
   const togglePlay = () => {
     const audio = audioRef.current;

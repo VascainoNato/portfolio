@@ -12,7 +12,9 @@ const nunito = Nunito({ subsets: ['latin'] })
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body className={`${nunito.className} bg-background text-primary`}>{children}</body>
+      <body className={`${nunito.className} bg-background text-primary flex flex-col min-h-screen`}>
+        {children}
+      </body>
     </html>
   )
 }

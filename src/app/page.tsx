@@ -6,10 +6,12 @@ import HomePage from "../../components/HomePage";
 export default function Home() {
   return (
     <>
-      <Header/>
-      <HomePage/>
-      <About/>
-      <Footer/>
+      <Header />
+      <main className="flex flex-col flex-grow">
+        <HomePage />
+        <About />
+      </main>
+      <Footer />
     </>
-  )
+  );
 }

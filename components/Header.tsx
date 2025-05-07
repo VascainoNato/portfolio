@@ -1,71 +1,20 @@
 'use client'
 import Image from "next/image"
 import Logo from "../public/logo.png"
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
+import { useAudioPlayer } from "@/services/useAudioPlayer";
 
 export default function Header() {
   const [lang, setLang] = useState<'pt' | 'en'>('pt');
-
-  const tracks = [
-    '/music/lofi1.mp3',
-    '/music/lofi2.mp3',
-    '/music/lofi3.mp3',
-    '/music/lofi4.mp3',
-    '/music/lofi5.mp3',
-    '/music/lofi6.mp3',
-    '/music/lofi7.mp3',
-    '/music/lofi8.mp3',
-  ];
-
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const [currentTrack, setCurrentTrack] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.4);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (audio) {
-      audio.src = tracks[currentTrack];
-      audio.volume = volume;
+  const {
+    audioRef,
+    isPlaying,
+    volume,
+    togglePlay,
+    handleEnded,
+    handleVolumeChange
+  } = useAudioPlayer();
   
-      const play = async () => {
-        try {
-          await audio.play();
-          setIsPlaying(true);
-        } catch{
-          console.warn('Autoplay bloqueado pelo navegador. Aguardando interação do usuário.');
-        }
-      };
-      play();
-    }
-  }, [currentTrack]);
-  
-
-  const togglePlay = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    if (audio.paused) {
-      audio.play();
-      setIsPlaying(true);
-    } else {
-      audio.pause();
-      setIsPlaying(false);
-    }
-  };
-
-  const handleEnded = () => {
-    setCurrentTrack((prev) => (prev + 1) % tracks.length);
-  };
-
-  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const vol = parseFloat(e.target.value);
-    setVolume(vol);
-    if (audioRef.current) {
-      audioRef.current.volume = vol;
-    }
-  };
-
   return (
     <header className="flex h-20 items-center pl-8 pr-8 bg-gray-50 justify-between border-b border-gray-200 w-full shadow-sm border-opacity-90 md:pl-10 md:pr-10 lg:pl-12 lg:pr-12 xl:pl-16 xl:pr-16 xl:h-20 2xl:pl-20 2xl:pr-20 2xl:h-20">
       <div className="flex items-center gap-2">

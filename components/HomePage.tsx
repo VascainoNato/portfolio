@@ -5,7 +5,6 @@ export default function HomePage() {
   return (
     <div className="flex bg-gray-50 h-screen flex-col">
       <div className="flex w-full items-center pl-8 pr-8 pt-8 flex-col lg:pt-10 md:pl-10 md:pr-10 lg:pl-12 lg:pr-12 xl:pl-16 xl:pr-16 2xl:pl-20 2xl:pr-20 ">
-
         <div className="flex w-full flex-col justify-center align-center gap-4 2xl:gap-2 pb-6 lg:pb-12">
           <h1 className="flex text-xl font-medium text-center xl:text-3x1 2xl:text-4xl 2xl:pb-4 transition ease-in-out duration-800 hover:scale-[1.05] text-neutral-800 justify-center">Not just a Frontend UI Engineer...</h1>
           <h1 className="flex text-lg font-medium text-center xl:text-3x1 2xl:text-3xl transition ease-in-out duration-800 hover:scale-[1.05] text-gray-600 2xl:pb-4 justify-center">An expert in user interface development.</h1>
@@ -20,13 +19,12 @@ export default function HomePage() {
             <div className="flex w-full justify-center items-center">
               <button className="flex bg-neutral-900 text-white rounded p-2 lg:w-[35%] xl:w-[30%] 2xl:w-[20%] text-md items-center justify-center transition ease-in-out duration-800 hover:scale-[1.05] cursor-pointer">Learn more</button>
             </div>
-           
           </div>
           <div className="flex w-full flex-col justify-center items-center">
             <Image
               src={icon}
               alt="Icon"
-              className="flex w-140 md:w-110 lg:w-100 2xl:w-150 transition ease-in-out duration-800 hover:scale-[1.01]"
+              className="flex w-140 md:w-110 lg:w-100 2xl:w-140 2xl:ml-10 transition ease-in-out duration-800 hover:scale-[1.01]"
             >
             </Image>
           </div>

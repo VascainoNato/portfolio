@@ -30,6 +30,7 @@ export default function Header() {
         </>
       </div>
       <div className="flex items-center gap-4 md:gap-6">
+        <h1 className="text-sm text-gray-600 xl:text-base transition ease-in-out duration-800 hover:scale-[1.05] cursor-pointer">Home</h1>
         <h1 className="text-sm text-gray-600 xl:text-base transition ease-in-out duration-800 hover:scale-[1.05] cursor-pointer">About</h1>
         <h1 className="text-sm text-gray-600 xl:text-base transition ease-in-out duration-800 hover:scale-[1.05] cursor-pointer">Projects</h1>
         <h1 className="text-sm text-gray-600 xl:text-base transition ease-in-out duration-800 hover:scale-[1.05] cursor-pointer">Contact</h1>

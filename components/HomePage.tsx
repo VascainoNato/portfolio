@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <div className="flex bg-gray-50 h-screen flex-col">
       <div className="flex w-full items-center pl-8 pr-8 pt-8 flex-col lg:pt-10 md:pl-10 md:pr-10 lg:pl-12 lg:pr-12 xl:pl-16 xl:pr-16 2xl:pl-20 2xl:pr-20 ">
-        <div className="flex w-full flex-col justify-center align-center gap-4 2xl:gap-2 pb-6 lg:pb-12">
+        <div className="flex w-full flex-col justify-center align-center gap-4 2xl:gap-3 pb-6 lg:pb-12">
           <h1 className="flex text-xl font-medium text-center xl:text-3x1 2xl:text-4xl 2xl:pb-4 transition ease-in-out duration-800 hover:scale-[1.05] text-neutral-800 justify-center">Not just a Frontend UI Engineer...</h1>
           <h1 className="flex text-lg font-medium text-center xl:text-3x1 2xl:text-3xl transition ease-in-out duration-800 hover:scale-[1.05] text-gray-600 2xl:pb-4 justify-center">An expert in user interface development.</h1>
           <span className="flex justify-center text-center text-xl text-gray-600 transition ease-in-out duration-800 hover:scale-[1.05]">Learn a little more about my skills, knowledge, history and what I can add to your project or company.</span>
